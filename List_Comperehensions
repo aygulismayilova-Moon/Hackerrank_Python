@@ -1,0 +1,35 @@
+if __name__ == '__main__':
+    x = int(input())
+    y = int(input())
+    z = int(input())
+    n = int(input())
+    
+    arr =[]
+    arr2 =[]
+    arr3 =[]
+    
+    
+    for i in range(x+1):
+        
+          
+        
+             
+        for j in range(y+1):
+            
+                
+            for k in range(z+1):
+                arr.append(i) 
+                arr.append(j)
+                arr.append(k)
+    l=3
+    arr2=[arr[i:i+l] for i in range(0,len(arr),l)]
+    
+    for f in range(len(arr2)):
+        m=sum(arr2[f])
+        if m !=n:
+            arr3.append(arr2[f])
+            
+    print(arr3)
+    
+
+    
