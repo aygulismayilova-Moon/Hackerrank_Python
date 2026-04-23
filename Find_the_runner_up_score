@@ -1,0 +1,12 @@
+if __name__ == '__main__':
+    n = int(input())
+    arr = map(int, input().split())
+    k=list(arr)
+    ##print(k) 
+    
+    
+    b=max(k)
+    numbers=[d for d in k if d!=b]
+    h=max(numbers)
+    
+    print(h)
