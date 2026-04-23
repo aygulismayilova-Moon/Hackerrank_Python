@@ -1,0 +1,22 @@
+if __name__ == '__main__':
+    mat =[]
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        mat.append(name)
+        mat.append(score)
+    two_d =[mat[i:i+2 ] for i in range(0,len(mat),2)]
+    d =[]
+    for i in range(len(two_d)):
+        d.append(two_d[i][1])
+    a=min(d)
+    k=[x for x  in d  if x!=a]
+    d=min(k)
+    string =[]
+    for i in range(len(two_d)):
+        if two_d[i][1]==d:
+            string.append(two_d[i][0])
+    string.sort()
+    
+    for i in range(len(string)):
+        print(string[i])
