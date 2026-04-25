@@ -1,0 +1,13 @@
+def solve(s):
+    l=s.split(" ")
+    k=""
+    for i in range(len(l)):
+        k=k+l[i].capitalize()+" "
+    
+    return k 
+if __name__=='__main__':
+    fptr = open(os.environ['OUTPUT PATH'],'w')
+    s=input()
+    result=solve(s)
+    fptr = write(result+'\n')
+    fptr.close()
