@@ -1,0 +1,18 @@
+def print_formatted(number):
+    # your code goes here
+    
+    c=" "
+    for i in range(number+1):
+        i+=1
+        if i<=number: 
+            k =bin(i)[2:]
+            l =len(bin(number)[2:])
+            n =len(str(i))
+            z=len(oct(i)[2:])
+            d=len(hex(i)[2:])
+            
+            print(c*(l-n)+str(i)+c*(1+l-z)+oct(i)[2:]+c*(1+l-d) +(hex(i)[2:]).upper()+(c*(1+l-(len(k)))).upper()+str(k))
+            
+ if __name__='__main__':
+            n=int(input())
+            print_formatted(n)
