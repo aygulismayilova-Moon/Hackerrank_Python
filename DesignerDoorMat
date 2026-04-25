@@ -1,0 +1,27 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+if __name__=='__main__':
+    n=input().split(" ")
+    l=int(n[0])
+    k=int(n[1])
+    c="-"
+    f="."
+    a="|"
+    s ="WELCOME"
+    h=int((k-len(s))/2)
+    
+    for i in range(l):
+        if i %2!=0: 
+            z=int((k-len((f+a+f)*i))/2)
+            
+            print(c*z+(f+a+f)*i+c*z)
+        
+    print(c*h+s+c*h)
+    t=l
+    for j in range(l):
+        t=t-1
+        if t%2!=0:
+            
+            z=int((k-len((f+a+f)*t))/2)
+            print(c*z+(f+a+f)*t+c*z)
+            
+    
