@@ -1,0 +1,22 @@
+def minion_game(string):
+    # your code goes here 
+    vowels=['A','E','U','I','O']
+    count_c=0
+    count_v=0 
+    
+    for index,m in enumerate(string):
+        
+        if m in vowels:
+            count_v+=len(string)-index
+        else:
+            count_c+=len(string)-index
+  
+    if count_c>count_v:
+        print("Stuart "+str(count_c))
+    elif count_v>count_c:
+        print("Kevin "+str(count_v))
+    else:
+        print("Draw")
+if __name__='__main__':
+    s=input()
+    minion_game(s)
