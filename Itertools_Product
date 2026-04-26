@@ -1,0 +1,37 @@
+def makeTuples(n,l):
+    d=[]
+    z=[]
+    f=()
+    st=""
+    int_n=[int(x) for x in n]
+    int_l=[int(x) for x in l ]
+    c=2
+    
+    
+    for i in range(len(int_n)):
+        for j in range(len(int_l)):
+            d.append(int_n[i])
+            d.append(int_l[j])
+            if len(d)%c==0:
+                z.append(tuple(d[0:c]))
+                d=d[c:]
+    
+    h =tuple(z)
+            
+    for k in range(len(h)):
+        f=h[k]
+        st+=str(f)+" "
+        
+    
+    return st
+    
+            
+            
+
+if __name__=='__main__':
+    
+    n = input().split()
+    l=input().split()
+    print(makeTuples(n,l))
+    
+    
