@@ -1,0 +1,25 @@
+def merge_the_tools(string, k):
+    # your code goes here
+    
+    n=len(string)
+    z=[]
+    
+    s=[string[i:i+k] for i in range(0,n,k)]
+    for j in range(len(s)):
+        c=set(s[j])
+        l=""
+        for i in range(len(s[j])):
+            if s[j][i] in c and s[j][i] not in l:
+                l+=s[j][i]
+                #z.append(l)
+                if len(l)==len(c):
+                    
+                    z.append(l)
+                    
+                    
+    for i in range(len(z)):
+        print(z[i])
+    
+    if __name__:=='__main__':
+        string,k=input(), int(input())
+        merge_the_tools(string,k)
