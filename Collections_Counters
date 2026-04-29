@@ -1,0 +1,26 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT1
+from collections import Counter 
+def count_str(n):
+    h=[]
+    l=""
+    for i in range(n):
+        l=input()
+        h.append(l)
+        
+        
+    
+    cnt=Counter(h)
+    #print(cnt.values())
+    distc_l=set(h)
+    #for item in h:
+        #if item not in distc_l:
+            #distc_l.append(item)
+    print(len(distc_l))
+    k=list(cnt.values())
+    s=" ".join(map(str,k))
+    print(s)
+
+if __name__=='__main__':
+    n=int(input())
+    
+    count_str(n)
