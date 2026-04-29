@@ -1,0 +1,22 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from itertools import permutations
+def permutation(k):
+    g="".join(sorted(k[0]))
+    v=int(k[1])
+    l=[]
+    s=""
+    l=list(permutations(g,r=v))
+    for i in range(len(l)):
+        s=""
+        for j in range(len(l[i])):
+            s+=l[i][j]
+        print(s)
+    #print(l)
+            
+        
+    
+    
+if __name__=="__main__":
+    k=input().split()
+    
+    permutation(k)
