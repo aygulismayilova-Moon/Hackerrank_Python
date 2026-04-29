@@ -1,0 +1,37 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from collections import Counter
+def earned_money(n,k,m):
+    
+    h=[]
+    w=[]
+    #k=[]
+    d=0
+    #print(k)
+    r=[int(t) for t in k]
+    for _ in range(m):
+        s,l=map(int,input().split())
+        h.append(s)
+        h.append(l)
+    h=[h[i:i+2] for i  in range(0,len(h),2)]
+    for j in range(len(h)):
+        if h[j][0] in r:
+            d+=h[j][1]
+            r.remove(h[j][0])
+            w.append(h[j])
+            #print(r)
+            
+    
+    print(d)
+    
+    #print(r)
+    
+
+if __name__=="__main__":
+    n=int(input())
+    
+    k=input().split()
+        
+    m=int(input())
+    #z=Counter(map(int,input().split())).items()    
+
+    earned_money(n,k,m)
