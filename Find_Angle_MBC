@@ -1,0 +1,9 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import cmath 
+if __name__=='__main__':
+    z=input()
+    x=complex(z).real
+    y=complex(z).imag
+    f=abs(complex(x,y))
+    g=cmath.phase(complex(x,y))
+    print(f"{f}\n{g}")
