@@ -1,0 +1,20 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from collections import defaultdict 
+if __name__=='__main__':
+    l=defaultdict(list)
+    k,y =map(int,input().split())
+    
+    for i in range(int(k)):
+        s=input().strip()
+        l[s].append(i+1)
+         
+    for i in range(int(y)):
+        s=input().strip()
+        if s not in l:
+            print(-1)
+            #break
+        else:
+            
+            print(*l[s])
+            
+            
