@@ -1,0 +1,19 @@
+def average(array):
+    # your code goes here
+    k=list(set(arr))
+    n=len(k)
+    avg=0
+    sum_=0
+    for i in k:
+        sum_+=i
+        if n!=0:
+            avg=sum_/n
+    #print(avg)
+    #print(k)
+    return avg
+
+if __name__=='__main__':
+    n=int(input())
+    arr=list(map(int,input().split()))
+    result(average(array))
+    print(result)
