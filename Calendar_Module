@@ -1,0 +1,15 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import calendar 
+
+if __name__=='__main__':
+    date_=input().split()
+    weekd_=["MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY","SUNDAY"]
+    month_=int(date_[0])
+    day_=int(date_[1])
+    year_=int(date_[2])
+    #print(date_)
+    week_=calendar.weekday(year_,month_,day_)
+    
+    
+    print(weekd_[week_])
+    
