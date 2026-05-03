@@ -1,0 +1,12 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+if __name__=='__main__':
+    n,m=map(int,input().split())
+    h=input().split()
+    l=0
+    #for i in range(m):
+    a=set(input().split())
+    b=set(input().split())
+    #print(m)
+    l=sum((i in a)-(i in b) for i in h)
+    
+    print(l)
