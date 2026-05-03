@@ -1,0 +1,14 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import math 
+def find_angle(a,b):
+    
+    c=math.sqrt((a*a)+(b*b))
+    n=a/c 
+    f=math.asin(n)
+    deg=math.degrees(f)
+    print(f"{round(deg)}\u00b0")
+    
+if __name__=='__main__':
+    a=int(input())
+    b=int(input())
+    find_angle(a,b)
