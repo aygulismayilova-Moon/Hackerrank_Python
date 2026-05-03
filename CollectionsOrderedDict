@@ -1,0 +1,16 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from collections import OrderedDict 
+if __name__=='__main__':
+    ord_dict=OrderedDict()
+    n=int(input())
+    for i in range(n):
+        s=input().rsplit(' ',1)
+        item_name=s[0]
+        price=int(s[1])
+        if item_name in ord_dict:
+            ord_dict[item_name]+=price
+        else:
+            ord_dict[item_name]=price
+        
+    for item, price in ord_dict.items():
+        print(f"{item} {price}")
