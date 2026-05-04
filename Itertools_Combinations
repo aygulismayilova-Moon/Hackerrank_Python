@@ -1,0 +1,17 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from itertools import combinations 
+if __name__=='__main__':
+    n=input().split()
+    a=n[0]
+    sort_a="".join(sorted(a))
+    b=int(n[1])
+    #l=[]
+    for i in range(b+1):
+        if i>0:
+            l=list(combinations(sort_a,i))
+            f=["".join(j) for j in l]
+            for k in f:
+                print(k)
+        
+        
+    
