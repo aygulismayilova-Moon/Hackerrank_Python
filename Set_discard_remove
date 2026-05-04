@@ -1,0 +1,24 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+#pypy3
+if __name__=="__main__":
+    n=int(input())
+    l=input().split()
+    m=int(input())
+    l.reverse()
+    f=set(l)
+    #print(f)
+    
+    
+    for i in range(0,m):
+        h=input().split()
+        
+        if h[0]=='pop':
+            
+            f.pop()
+            #print(int_l)
+        elif h[0]=='remove' and h[1] in f:
+            f.remove(h[1])
+        elif h[0]=='discard' and h[1] in f:
+            f.discard(h[1])
+    d=[int(x) for x in f] 
+    print(sum(d))
