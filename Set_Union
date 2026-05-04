@@ -1,0 +1,8 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+if __name__=="__main__":
+    n=int(input())
+    m=set(input().split())
+    k=int(input())
+    l=set(input().split())
+    
+    print(len(m.union(l)))
