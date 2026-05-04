@@ -1,0 +1,18 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+if __name__=='__main__':
+    n=input()
+    h=input().split()
+    a=set(h)
+    m=input()
+    l=input().split()
+    b=set(l)
+    c=a.difference(b)
+    k=b.difference(a)
+    z=c.union(k)
+    r=list(z)
+    r.sort(key=int)
+    
+    for i in range(len(r)):
+        print(r[i])
+
+    #print(r)
