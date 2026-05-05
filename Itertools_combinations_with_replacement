@@ -1,0 +1,10 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from itertools import combinations_with_replacement
+if __name__=='__main__':
+    s=input().split()
+    l="".join(sorted(s[0]))
+    k=list(combinations_with_replacement(l,int(s[1])))
+    k.sort()
+    for i in range(len(k)):
+        z="".join(k[i])
+        print(z)
