@@ -1,0 +1,28 @@
+from collections import deque 
+if __name__=="__main__":
+    t=int(input())
+    for i in range(t):
+        n=int(input())
+        l=list(map(int,input().split()))
+        h=deque(l)
+        #print(l)
+        z=[]
+        m=""
+        for _ in range(n):
+            if h[0]>=h[-1]:
+                z.append(h[0])
+                h.popleft()
+            elif h[0]<h[-1]:
+                z.append(h[-1])
+                h.pop()
+        
+        d=sorted(z,reverse=True)
+        if d==z:
+            print("Yes")
+        else:
+            print("No")
+        
+            
+        
+        
+            
