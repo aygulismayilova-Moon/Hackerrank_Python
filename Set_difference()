@@ -1,0 +1,9 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+if __name__=="__main__":
+    n=int(input())
+    m=set(input().split())
+    k=int(input())
+    c=set(input().split())
+    
+    f=m.difference(c)
+    print(len(f))
