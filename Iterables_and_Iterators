@@ -1,0 +1,27 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from itertools import combinations 
+if __name__=="__main__":
+    n=int(input())
+    l=input().split()
+    r=int(input())
+    d=l[:r].count('a')
+    #print(d)
+    #print(r)
+    #index_=l.index('a')
+    #print(index_)
+    h=list(combinations(l,r))
+    f=len(h)
+    #print(f)
+    g=0
+    for i in range(d):
+            for j in range(f):
+                if l[i] in h[j]:
+                    g+=1
+    #print(g)
+    k=0
+    if d!=0:
+        k=g/d
+    else:
+        k=0
+    m=k/f 
+    print(m)
