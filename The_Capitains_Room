@@ -1,0 +1,9 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from collections import Counter 
+if __name__=="__main__":
+    n=int(input())
+    l=list(map(int,input().split()))
+    g=Counter(l)
+    f=[i for i,count in g.items() if count==1]
+    print(f[0])
+        
