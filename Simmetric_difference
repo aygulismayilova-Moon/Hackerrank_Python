@@ -1,0 +1,8 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+if __name__=="__main__":
+    n=int(input())
+    f=set(map(int,input().split()))
+    m=int(input())
+    g=set(map(int,input().split()))
+    
+    print(len(f.symmetric_difference(g)))
