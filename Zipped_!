@@ -1,0 +1,14 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+if __name__=="__main__":
+    n,m=map(int,input().split())
+    d=0
+    two_d=[]
+    for i in range(m):
+        l=list(map(float,input().split()))
+        two_d.append(l)
+    for k in range(n):
+        for j in range(m):
+            d+=two_d[j][k]
+            avg=d/m
+        print(avg)
+        d=0
