@@ -1,0 +1,13 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+if __name__=="__main__":
+    n=int(input())
+    for i in range(n):
+        f=int(input())
+        a=set(map(int,input().split()))
+        g=int(input())
+        b=set(map(int,input().split()))
+        
+        if a.issubset(b):
+            print("True")
+        else:
+            print("False")
