@@ -1,0 +1,21 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+if __name__=="__main__":
+    n=int(input())
+    l=set(map(int,input().split()))
+    m=int(input())
+    #print(m)
+    
+    for i in range(m):
+        s=input().split()
+        h=set(map(int,input().split()))
+        if s[0]=="intersection_update":
+            l.intersection_update(h)
+        if s[0]=="update":
+            l.update(h)
+        if s[0]=="symmetric_difference_update":
+            l.symmetric_difference_update(h)
+        if s[0]=="difference_update":
+            l.difference_update(h)
+            
+    #print(l)
+    print(sum(list(l)))
