@@ -1,0 +1,20 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+if __name__=="__main__":
+    n,m=map(int,input().split())
+    s=input()
+    h=[str(j) for j in range(n,n+1)]
+    g=h[0]
+    
+    for i in range(len(s)):
+        if s[i]=="x":
+            s=s[:i]+g+s[i+1:]
+            #print(s)
+            
+    k=eval(s)    
+    #print(d)
+    
+    if k==m:
+        print(True)
+    else:
+        print(False)
