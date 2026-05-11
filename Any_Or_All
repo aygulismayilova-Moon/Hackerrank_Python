@@ -1,0 +1,22 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+n=int(input())
+s=list(map(int,input().split()))
+
+for i in s:
+    if i>0:
+        reversed_n=int(str(i)[::-1])
+        bool_b=False 
+        if i==reversed_n:
+            bool_b=True 
+            break 
+
+z=any(s)
+#print(z)
+    
+k=all(x>0 for x in s)
+
+
+if k==True and bool_b==True:
+    print(True)
+else: 
+    print(False)
