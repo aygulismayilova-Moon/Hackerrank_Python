@@ -1,0 +1,15 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+s=input()
+letters=sorted([c for c in s if c.isalpha()])
+digits=sorted([c for c in s if c.isdigit()])
+
+k="".join(i for i in letters)
+z="".join(i for i in digits)
+
+d=sorted(k, key=lambda x:(x.isupper(),x))
+h=sorted(z, key=lambda x:(int(x)%2==0,x))
+
+m="".join(i for i in d)
+n="".join(i for i in h)
+
+print("".join(d+h))
