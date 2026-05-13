@@ -1,0 +1,23 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import re
+s=input()
+re.finditer(r"[aioueAOUE]+",s)
+k=list(map(lambda x:x.group(),re.finditer(r"[aioueAIOUE]+",s)))
+
+y=[i for i in k if len(i)>1]
+g=len(y)
+b=len(s)
+
+if g>0:
+    x=s[b-len(y[g-1]):b]
+    
+h=all(len(x)==1 for x in k)
+
+if h:
+    print(-1)
+elif g>0:
+    for i in k:
+        if len(i)>1 and i!=x:
+            print(i)
+else:
+    print(-1)
