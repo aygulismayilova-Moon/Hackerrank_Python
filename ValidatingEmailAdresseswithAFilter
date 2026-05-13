@@ -1,0 +1,27 @@
+import re
+def fun(s):
+    regX=r"[0-9A-Za-z-_]+"
+    regY=r"[0-9A-Za-z]+"
+    regE=r"[A-Za-z]+"
+    
+    l=[]
+    if "@" in s and "." in s:
+        n=s.count("@")
+        m=s.count(".")
+        c=s.index("@")
+        d=s.index(".")
+        
+        str1=s[0:c]
+        str2=s[c+1:d]
+        str3=s[d+1:]
+        
+        if m==1 and n==1 and c<d:
+            if bool(re.fullmatch(regX,str1)) and bool(re.fullmatch(regY,str2)) and bool(re.fullmatch(regE,str3)) and len(str3)<=3:
+                l.append(s)
+        else:
+            l
+    return l
+    
+    
+    # return True if s is a valid email, else return False
+
