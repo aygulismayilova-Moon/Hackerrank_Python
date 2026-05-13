@@ -1,0 +1,27 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import string
+n = int(input())
+
+for i in range(n):
+    s=input()
+    cnt=0
+    symbols=string.punctuation
+    k=s.count(".")
+    for i in range(len(s)):
+        if s[i] in symbols and s[i+1] in symbols:
+            cnt+=1
+    
+    
+    if any(char.isalpha() for char in s):
+        print(False)
+    elif cnt>1:
+        print(False)
+    elif k>1:
+        print(False)
+    elif  any(char in symbols  for char in s[1:] if char!='.'):
+        print(False)
+    elif s.isdigit():
+        print(False)
+    
+    else:
+        print(True)
