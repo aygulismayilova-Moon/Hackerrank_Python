@@ -1,0 +1,21 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from html.parser import HTMLParser 
+class D(HTMLParser):
+    
+    def handle_starttag(self,tag,attr):
+        print("Start :",tag)
+        for a in attr:
+            print("->",a[0],">",a[1])
+        
+    def handle_endtag(self,tag):
+        print("End   :",tag)
+            
+    def handle_startendtag(self,data,attrs):
+        print("Empty :",data)
+        for a in attrs:
+            print("->",a[0],">",a[1])
+
+
+d=D()
+s="".join([input().strip() for _ in range(0,int(input()))])
+d.feed(s)
