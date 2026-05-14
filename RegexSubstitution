@@ -1,0 +1,10 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import re
+n=int(input())
+
+for i in range(n):
+    s=input()
+    
+    pat=r"(?<=\s)&&(?=\s)|(?<=\s)\|\|(?=\s)"
+    l=re.sub(pat,lambda x:"and" if x.group()=="&&" else "or",s)
+    print(l)
