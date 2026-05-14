@@ -1,0 +1,16 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from html.parser import HTMLParser 
+class A(HTMLParser):
+    def handle_starttag(self,tag,attrs):
+        print(tag)
+        for a in attrs:
+            print("->", a[0], ">", a[1])
+    #def handle_comment(self,tag):
+        #print(tag)
+    #def handle_data(self,data):
+        #print(data)
+            
+
+d=A()
+s="".join([input() for i in range(int(input()))])
+d.feed(s)
