@@ -1,0 +1,14 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import re
+
+if __name__=="__main__":
+    for _ in range(int(input())):
+        str_=input()
+        
+        match=re.findall(r"(#[0-9a-fA-F]{3}|#[0-9a-fA-F]{6})(?=[;,\)])",str_)
+        #print(match)
+        
+        if match:
+            for i in match:
+                print(i)
+    
