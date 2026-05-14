@@ -1,0 +1,14 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import re 
+reg=r"7|8|9"
+n=int(input())
+for i in range(n):
+    s=input()
+    k=bool(re.match(reg,s[0]))
+    h=bool(re.fullmatch(r"\d+",s))
+    #print(h)
+    if h and k and len(s)==10:
+        print("YES")
+    else:
+        print("NO")
+    #print(k)
