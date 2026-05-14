@@ -1,0 +1,47 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import email.utils
+import re 
+if __name__=="__main__":
+    n=int(input())
+    regX=r"^[A-Za-z]+"
+    
+    
+    regY=r"[A-Za-z]+"
+    
+    
+    z=0
+    for i in range(n):
+        s=input()
+        cn=s.count("@")
+        cn1=s.count(".")
+        k=email.utils.parseaddr(s)
+        h=email.utils.formataddr((k))
+        #print(h)
+        
+        if cn==1 and h!="" and cn1>0:
+            #website=k[1][k[1].index("@")+1:k[1].index(".")]
+            #print(website)
+            c=k[1].index("@")
+            if cn1==1:
+                extension=k[1][k[1].index(".")+1:]
+                website=k[1][k[1].index("@")+1:k[1].index(".")]
+                #print(website)
+                
+            else:
+                for j in range(len(k[1])):
+                    
+                    if k[1][j]==".":
+                        z+=1
+                        #print(j)
+                        if z==cn1:
+                            extension=k[1][j+1:len(k[1])]
+                            website=k[1][c+1:j]
+                            #print(extension)
+                            #print(website)
+                            z=0
+        
+            name=k[1][0:k[1].index("@")]
+            #print(extension)
+            #print(website)
+            if (name.count("-")>0 or name.count(".")>0 or name.count("_")>0 or re.search(regX,name))  and  re.fullmatch(regY,website) and len(extension)<4 and re.fullmatch(regY,extension) and re.fullmatch(regY,k[1][0]):
+                print(h)
