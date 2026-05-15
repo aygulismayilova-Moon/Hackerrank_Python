@@ -1,0 +1,16 @@
+def wrapper(f):
+    def fun(l):
+        
+        # complete the function
+        n=len(l)
+        z=[]
+        for i in range(n):
+            k=l[i][len(l[i])-10:len(l[i])]
+            z.append(k)
+        g=sorted(z)
+        for j in range(len(z)):
+            print("+91" +" "+g[j][0:5]+" "+g[j][5:10])
+        #print(sorted(z))
+        
+    return fun
+
