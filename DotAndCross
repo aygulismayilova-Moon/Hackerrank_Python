@@ -1,0 +1,18 @@
+import numpy
+
+if __name__=="__main__":
+    n=int(input())
+    z=[]
+    k=[]
+    for i in range(2*n):
+        
+        l=list(map(int,input().split()))
+        if i<n:
+            z.append(l)
+        else:
+            k.append(l)
+        
+        
+        
+    print(numpy.dot(z,k))
+    #k=numpy.array([input().split() for _ in range(n)],int)print(k)
