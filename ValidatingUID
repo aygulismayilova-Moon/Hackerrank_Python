@@ -1,0 +1,39 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+import re
+
+regx=r"[A-Za-z0-9]+"
+cd=0
+cu=0
+n=int(input().strip())
+for i in range(n):
+    s=input()
+    k=set(list(s))
+    z=list(k)
+    #print(s.isalnum())
+    l=[]
+    #print(k)
+    for i in range(len(k)):
+        if z[i].isdigit():
+            cd+=1
+            #print(cd)
+        if z[i].isalpha() and z[i].isupper():
+            cu+=1
+            #print(cu)
+        if i==len(k)-1:
+            l.append(cd)
+            l.append(cu)
+            cu=0
+            cd=0
+            #print(cd)
+    #print(cd)
+    if len(k)==10 and l[0]>=3 and l[1]>=2 and s.isalnum():
+        match_=re.findall(regx,s)
+        #print(bool(match_))
+        
+        if match_:
+            print("Valid")
+        else:
+            print("Invalid")
+    else:
+        print("Invalid")
