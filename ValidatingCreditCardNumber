@@ -1,0 +1,19 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import re
+
+if __name__=="__main__":
+    regX=r"^[456]\d{3}\-\d{4}\-\d{4}\-\d{4}$"
+    regY=r"[456]\d{15}"
+    n=int(input())
+    for i in range(n):
+        s=input()
+        l=s.replace("-","")
+        match=re.search(r'(\d)\1{3}',l)
+        #print(match)
+        
+        match_=bool(re.fullmatch(regX,s))
+        match2=bool(re.fullmatch(regY,s))
+        if  not match and (match_ or match2) and (len(s)==19 or len(s)==16):
+            print("Valid")
+        else:
+            print("Invalid")
