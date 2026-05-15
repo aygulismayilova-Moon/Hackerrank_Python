@@ -1,0 +1,20 @@
+import sys
+import xml.etree.ElementTree as etree
+
+def get_attr_number(node):
+    # your code goes here
+    result=0
+    for child in node:
+        result+=get_attr_number(child)
+        #print(child)
+    #print(node.attrib)
+    
+    return result+len(node.attrib)
+if __name__=="__main__":
+    sys.stdin.readline()
+    xml.sys.stdin.read()
+    tree=etree.ElementTree(etree.formstring(xml))
+    root=tree.getroot()
+    print(get_attr_number(root))
+
+    
