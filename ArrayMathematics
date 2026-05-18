@@ -1,0 +1,33 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import numpy
+
+n,m=map(int,input().split())
+add_=[]
+sub_=[]
+mul_=[]
+fl_=[]
+mod_=[]
+pw_=[]
+a_=[]
+b_=[]
+for i in range(n):
+    a=list(map(int,input().split()))
+    a_.append(a)
+for i in range(n):
+    b=list(map(int,input().split()))
+    b_.append(b)
+
+for i in range(len(a_)): 
+    k=numpy.add(a_[i],b_[i])
+    add_.append(k)
+    l=numpy.subtract(a_[i],b_[i])
+    sub_.append(l)
+    s=numpy.multiply(a_[i],b_[i])
+    mul_.append(s)
+    y=numpy.floor_divide(a_[i],b_[i])
+    fl_.append(y)
+    q=numpy.mod(a_[i],b_[i])
+    mod_.append(q)
+    z=numpy.power(a_[i],b_[i])
+    pw_.append(z)
+print(f"{numpy.array(add_)}\n{numpy.array(sub_)}\n{numpy.array(mul_)}\n{numpy.array(fl_)}\n{numpy.array(mod_)}\n{numpy.array(pw_)}")
