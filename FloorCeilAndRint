@@ -1,0 +1,6 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import numpy
+
+s=list(map(float,input().split()))
+numpy.set_printoptions(sign=" ")
+print(f"{numpy.floor(s)}\n{numpy.ceil(s)}\n{numpy.rint(s)}")
