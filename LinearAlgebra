@@ -1,0 +1,10 @@
+import numpy
+
+n=int(input())
+k=[]
+for i in range(n):
+    s=list(map(float,input().split()))
+    k.append(s)
+    
+h=round(numpy.linalg.det(k),2)
+print(h)
