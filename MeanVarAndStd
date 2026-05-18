@@ -1,0 +1,15 @@
+import numpy
+
+if __name__=="__main__":
+    n,m=map(int,input().split())
+    
+    k=[]
+    for i in range(n):
+        s=list(map(int,input().split()))
+        k.append(s)
+    h=numpy.mean(k,axis=1)
+    g=numpy.var(k,axis=0)
+    d=numpy.round(((numpy.std(k))),11)
+    print(f"{h}\n{g}\n{d}")
+        
+
