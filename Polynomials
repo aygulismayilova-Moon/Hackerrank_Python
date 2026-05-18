@@ -1,0 +1,10 @@
+import numpy
+
+f=list(map(float,input().split()))
+n=int(input())
+k=numpy.poly(f)
+d=numpy.roots(k)
+b=numpy.polyint(f)
+a=numpy.polyder(b)
+z=numpy.polyval(a,n)
+print(z)
