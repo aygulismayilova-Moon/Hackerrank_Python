@@ -1,0 +1,25 @@
+
+def arrays(arr):
+    # complete this function
+    # use numpy.array
+    arr1=[]
+    for k in arr:
+        if k.count(".")>0:
+            j=float(k)
+            arr1.append(j)
+        else:
+            arr1.append(int(k))
+    cn=[]
+    cm=[]
+
+    for i in arr1:
+        if i>0:
+            cn.append(i)
+        else:
+            cm.append(i)
+    m =sorted(cn,reverse=True)
+    cm.sort()
+    k=cm+m
+    #print(k)
+    return numpy.array(k,float)
+
