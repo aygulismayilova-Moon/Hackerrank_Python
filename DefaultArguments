@@ -1,0 +1,8 @@
+
+
+def print_from_stream(n, stream=EvenStream()):
+    temp=stream.current
+    for _ in range(n):
+        #print_from_stream(n,OddStream())
+        print(stream.get_next())
+    stream.current=temp 
