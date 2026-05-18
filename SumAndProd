@@ -1,0 +1,14 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+import numpy
+
+n,m=map(int,input().split())
+k=[]
+
+for i in range(n):
+    s=list(map(int,input().split()))
+    k.append(s)
+z=numpy.array(k)
+g=numpy.sum(z, axis=0)
+l=numpy.prod(g)
+print(l)
