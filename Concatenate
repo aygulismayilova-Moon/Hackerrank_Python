@@ -1,0 +1,17 @@
+import numpy
+
+n,m,l =map(int,input().split())
+array1=[]
+array2=[]
+
+for i in range(n):
+    s=list(map(int,input().split()))
+    array1.append(s)
+    arr1=numpy.array(array1)
+
+for j in range(m):
+    h=list(map(int,input().split()))
+    array2.append(h)
+    arr2=numpy.array(array2)
+    
+print(numpy.concatenate((arr1,arr2)))
