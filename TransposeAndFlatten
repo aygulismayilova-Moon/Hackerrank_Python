@@ -1,0 +1,11 @@
+import numpy
+
+n,m=map(int,input().split())
+g=[]
+for i in range(n):
+    g.append(list(map(int,input().split())))
+l=numpy.array(g)
+p=numpy.transpose(l)
+print(p)
+k=numpy.array(sorted(p.flatten()))
+print(k)
